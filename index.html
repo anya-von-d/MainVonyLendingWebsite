@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>VONY</title>
+  <meta name="description" content="Vony connects lenders and borrowers directly through our secure peer-to-peer micro-lending platform. Simple, transparent, and trusted.">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=20251011">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css?v=20251011">
+  <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css?v=20251011">
+  <link rel="stylesheet" href="assets/css/slick.css?v=20251011">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css?v=20251011">
+  <link rel="stylesheet" href="assets/css/animate.min.css?v=20251011">
+  <link rel="stylesheet" href="assets/css/odometer.css?v=20251011">
+  <link rel="stylesheet" href="assets/css/style.css?v=20251011b">
+</head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+
+        e.preventDefault();
+
+        const duration = 600;
+        const start = window.scrollY;
+        const end = target.getBoundingClientRect().top + window.scrollY;
+        const startTime = performance.now();
+
+        function scroll() {
+          const now = performance.now();
+          const time = Math.min(1, (now - startTime) / duration);
+          const easing = 1 - Math.pow(1 - time, 3);
+          window.scrollTo(0, start + (end - start) * easing);
+
+          if (time < 1) {
+            requestAnimationFrame(scroll);
+          }
+        }
+
+        requestAnimationFrame(scroll);
+      });
+    });
+  });
+</script>
+
+<body>
+  <!-- loading section start -->
+  <div class="fullpage_loader">
+    <div class="loader"></div>
+  </div>
+  <script>
+    // Hide loader immediately
+    document.querySelector('.fullpage_loader').style.display = 'none';
+  </script>
+  <!-- loading section end -->
+
+  <!-- header section start -->
+  <div id="header-fixed-height"></div>
+  <header class="header-section w-100" id="sticky-header">
+    <nav class="navbar p-0 navbar-expand-lg">
+      <div class="container px-0 d-flex align-items-center justify-content-between">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo/vony-logo.png" alt="Vony Logo" style="height: 40px; width: auto;">
+        </a>
+        
+        <!-- Desktop Navigation - Show on medium screens and up (768px+) -->
+        <ul class="navbar-nav mb-0 d-flex flex-row mx-auto d-none d-md-flex" style="list-style: none; padding-left: 0;">
+          <li class="nav-item me-5"><a class="nav-link" href="#use-cases">Uses</a></li>
+          <li class="nav-item me-5"><a class="nav-link" href="#how-it-works">How it Works</a></li>
+          <li class="nav-item me-5"><a class="nav-link" href="#features">Key Features</a></li>
+          <li class="nav-item me-5"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <!-- Navigation Toggle and Get Started -->
+        <div class="d-flex align-items-center">
+          <div class="join-with-us">
+            <a href="https://lend-with-vony.com" class="join-with-us-btn" target="_blank">
+              Get Started
+            </a>
+          </div>
+          
+          <!-- Mobile Menu Toggle - Only show on small screens (below 768px) -->
+          <button class="navbar-toggler d-md-none border-0 bg-transparent p-1 ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation Menu - Only show on small screens -->
+      <div class="collapse navbar-collapse d-md-none" id="mobileNavMenu">
+        <div class="container px-0">
+          <ul class="navbar-nav py-3" style="list-style: none; padding-left: 0;">
+            <li class="nav-item mb-2"><a class="nav-link" href="#use-cases">Uses</a></li>
+            <li class="nav-item mb-2"><a class="nav-link" href="#how-it-works">How it Works</a></li>
+            <li class="nav-item mb-2"><a class="nav-link" href="#features">Key Features</a></li>
+            <li class="nav-item mb-2"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- header section end -->
+
+  <!-- main area start -->
+  <main class="position-relative">
+    
+    <!-- hero section start -->
+    <section class="banner-section-three" style="padding-bottom: 1rem; padding-top: 2rem;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-6">
+            <div class="text">
+              <div class="top-title position-relative">
+                <h1 class="title split-text">
+                  Lending Money to Friends Made Simple
+                </h1>
+              </div>
+              <p>Skip the awkwardness of lending money to friends and family. Create clear agreements, transfer funds securely, and track repayments, all in one place.</p>
+              <div class="hero-buttons mt-4">
+                <a href="https://lend-with-vony.com" class="theme-btn position-relative" target="_blank">Get Started
+                  <span class="d-flex justify-content-center align-items-center position-absolute top-0">
+                    <img src="img/icons/icon-up-right.svg" alt="arrow"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6"> 
+            <div class="image position-relative d-flex align-items-center justify-content-center hero-image-container">
+              <div class="img reveal zoom-out hero-checkbook-wrapper">
+                <img src="attached_assets/checkbook_1755049416452.png" alt="Vony Platform" class="img-fluid w-100 hero-checkbook-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- trust indicators section start -->
+    <section class="static-banner-section"
+    style="transform: rotate(-1deg); margin-top: 2rem; margin-bottom: 0; padding: 2rem 0; background-color: #5EC47E;">
+      <div class="d-flex align-items-center justify-content-center" style="background-color: #5EC47E;">
+        <h4 class="title" style="color: #ffffff; margin: 0; margin-right: 8rem;">COMING SOON</h4>
+        <h4 class="title" style="color: #ffffff; margin: 0; margin-right: 8rem;">COMING SOON</h4>
+        <h4 class="title" style="color: #ffffff; margin: 0; margin-right: 8rem;">COMING SOON</h4>
+        <h4 class="title" style="color: #ffffff; margin: 0;">COMING SOON</h4>
+      </div>
+    </section>
+    <!-- trust indicators section end -->
+
+    <!-- about section start -->
+    <section id="about-us" class="feature-section feature-section-three content" style="margin-top: 0; padding-top: 6rem;">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="section-title-block text-center">
+              <h3 class="section-title split-text right mb-4 mb-md-5 text-center" style="text-align: center !important;">Making Personal Lending Simple and Secure</h3>
+              <p class="fs-5 lh-base mx-auto text-center" style="max-width: 700px;">No more awkward conversations about money with friends and family. Vony creates clear agreements, handles secure transfers, and tracks repayments so everyone stays on the same page.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- trust indicators section 2 start -->
+    <section class="text-slider-section text-slider-section-three"
+    style="margin: 3rem 0; padding: 1rem 0; background-color: #3E3A4E;">
+      <div class="slider-main d-flex align-items-center" style="background-color: #3E3A4E;">
+        <div class="slider-item d-flex align-items-center" style="background-color: #3E3A4E;">
+          <h4 class="title" style="color: #ffffff;">Clear Agreements</h4>
+          <h4 class="title" style="color: #ffffff;">Secure Payments</h4>
+          <h4 class="title" style="color: #ffffff;">Friends & Family Lending</h4>
+          <h4 class="title" style="color: #ffffff;">Track Repayments</h4>
+        </div>
+        <div class="slider-item d-flex align-items-center" style="background-color: #3E3A4E;">
+          <h4 class="title" style="color: #ffffff;">Clear Agreements</h4>
+          <h4 class="title" style="color: #ffffff;">Secure Payments</h4>
+          <h4 class="title" style="color: #ffffff;">Friends & Family Lending</h4>
+          <h4 class="title" style="color: #ffffff;">Track Repayments</h4>
+        </div>
+      </div>
+    </section>
+    <!-- trust indicators section 2 end -->
+
+    <!-- use cases section start -->
+    <section id="use-cases" class="feature-section-two content" style="padding-top: 6rem;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-block text-center">
+              <h5 class="section-sub-title">Uses</h5>
+              <h3 class="section-title split-text right text-center" style="text-align: center !important;">Perfect for Real-Life Situations</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row gy-4 mt-4 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+            <div class="feature-item text-center p-4 h-100">
+              <div class="icon mb-3 mb-md-4">
+                <img src="img/icons/handshake-icon.svg" alt="Direct P2P" style="width: 50px; height: 50px;" class="d-md-none">
+                <img src="img/icons/handshake-icon.svg" alt="Direct P2P" style="width: 60px; height: 60px;" class="d-none d-md-block">
+              </div>
+              <h4 class="title">Split Dinner Bills</h4>
+              <p class="mb-0">Cover your friend's share at dinner and send them a quick repayment request. Money comes back on an agreed schedule, no more awkward reminders.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item text-center p-4 h-100">
+              <div class="icon mb-3 mb-md-4">
+                <img src="img/icons/security-icon.svg" alt="Security" style="width: 50px; height: 50px;" class="d-md-none">
+                <img src="img/icons/security-icon.svg" alt="Security" style="width: 60px; height: 60px;" class="d-none d-md-block">
+              </div>
+              <h4 class="title">Help with Rent</h4>
+              <p class="mb-0">When your roommate is short on rent, set up a small loan with clear terms. Make repayment straightforward and stress-free for both of you.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mx-auto">
+            <div class="feature-item text-center p-4 h-100">
+              <div class="icon mb-3 mb-md-4">
+                <img src="img/icons/tracking-icon.svg" alt="Tracking" style="width: 50px; height: 50px;" class="d-md-none">
+                <img src="img/icons/tracking-icon.svg" alt="Tracking" style="width: 60px; height: 60px;" class="d-none d-md-block">
+              </div>
+              <h4 class="title">Urgent Car Repairs</h4>
+              <p class="mb-0">Help a friend pay for unexpected car repairs with a clear contract. Transfer funds securely and track every payment until it's fully repaid.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- use cases section end -->
+
+    <!-- how it works section start -->
+    <section id="how-it-works" class="services-section content" style="border: none; padding-top: 5rem;">
+      <div class="container-fluid services-container position-relative" style="border: none;">
+        <div class="services-top-info" style="border: none;">
+          <div class="row" style="border: none;">
+            <div class="col-12" style="border: none;">
+              <div class="section-title-block text-center" style="border: none;">
+                <h5 class="section-sub-title">How It Works</h5>
+                <h3 class="section-title split-text right text-center" style="text-align: center !important;">How Vony Works for Friends and Family</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="services-main" style="border: none;">
+            <div class="services-item fade-up" style="border: none;">
+            <div class="d-flex justify-content-between gap-4 row-gap-3 flex-wrap align-items-center w-100">
+              <h5 class="number w-100">01</h5>
+              <h3 class="title w-100">Account Creation</h3>
+              <p class="des w-100">Sign up and verify your identity. Link bank accounts for secure transactions.</p>
+            </div>
+          </div>
+          <div class="services-item fade-up" style="border: none;">
+            <div class="d-flex justify-content-between gap-4 row-gap-3 flex-wrap align-items-center w-100">
+              <h5 class="number w-100">02</h5>
+              <h3 class="title w-100">Create Loan Offer</h3>
+              <p class="des w-100">Set loan amount, payment plan, and repayment period. Send offer instantly.</p>
+            </div>
+          </div>
+          <div class="services-item fade-up" style="border: none;">
+            <div class="d-flex justify-content-between gap-4 row-gap-3 flex-wrap align-items-center w-100">
+              <h5 class="number w-100">03</h5>
+              <h3 class="title w-100">Review & Accept</h3>
+              <p class="des w-100">Review offer details and complete simple in-app contract agreement.</p>
+            </div>
+          </div>
+          <div class="services-item fade-up" style="border: none;">
+            <div class="d-flex justify-content-between gap-4 row-gap-3 flex-wrap align-items-center w-100">
+              <h5 class="number w-100">04</h5>
+              <h3 class="title w-100">Loan Activated</h3>
+              <p class="des w-100">Agreement recorded and funds transferred securely to borrower.</p>
+            </div>
+          </div>
+          <div class="services-item fade-up" style="border: none;">
+            <div class="d-flex justify-content-between gap-4 row-gap-3 flex-wrap align-items-center w-100">
+              <h5 class="number w-100">05</h5>
+              <h3 class="title w-100">Track Repayments</h3>
+              <p class="des w-100">Send payments in-app and track progress in real time.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- how it works section end -->
+
+    <!-- key features section start -->
+    <section id="features" class="feature-section-two content" style="padding-top: 6rem;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-block text-center">
+              <h5 class="section-sub-title">Key Features</h5>
+              <h3 class="section-title split-text right text-center" style="text-align: center !important;">Flexible Lending Options</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row gy-4 mt-4 justify-content-center">
+            <div class="col-lg-6 col-md-6">
+            <div class="feature-item text-center p-4 h-100">
+              <div class="icon mb-3 mb-md-4">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="30" fill="#5EC47E" opacity="0.1"/>
+                  <path d="M20 25h20v15H20V25z" stroke="#5EC47E" stroke-width="2" fill="none"/>
+                  <path d="M17.5 22.5h25v2.5h-25v-2.5z" fill="#5EC47E"/>
+                  <path d="M25 30h10M25 35h6" stroke="#5EC47E" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h4 class="title mb-3">Custom Payment Plans</h4>
+              <p>Set up flexible payment schedules that work for both parties. Weekly, bi-weekly, or monthly payments with customizable amounts.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="feature-item text-center p-4 h-100">
+              <div class="icon mb-3 mb-md-4">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="30" fill="#5EC47E" opacity="0.1"/>
+                  <path d="M30 15v30M15 30h30" stroke="#5EC47E" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M25 20l5-5 5 5M25 40l5 5 5-5" stroke="#5EC47E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4 class="title mb-3">Interest Rate Options</h4>
+              <p>Choose to lend with or without interest. Set fair rates for both parties or keep it simple with zero-interest loans between friends.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="feature-item text-center p-4 h-100">
+              <div class="icon mb-3 mb-md-4">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="30" fill="#5EC47E" opacity="0.1"/>
+                  <circle cx="30" cy="30" r="12" stroke="#5EC47E" stroke-width="2" fill="none"/>
+                  <path d="M30 24v6l4 4" stroke="#5EC47E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M30 18v-3M30 45v-3M42 30h3M15 30h3" stroke="#5EC47E" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h4 class="title mb-3">Repayment Periods</h4>
+              <p>Set realistic timeframes from days to years. Perfect for short-term emergency loans or longer-term financial assistance.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="feature-item text-center p-4 h-100">
+              <div class="icon mb-3 mb-md-4">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="30" fill="#5EC47E" opacity="0.1"/>
+                  <path d="M20 20h20v20H20V20z" stroke="#5EC47E" stroke-width="2" fill="none"/>
+                  <path d="M23 25h14M23 30h10M23 35h8" stroke="#5EC47E" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M35 15l5 5-5 5" stroke="#5EC47E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4 class="title mb-3">Digital Contracts</h4>
+              <p>Clear, legally-binding agreements created automatically. Both parties sign digitally with all terms clearly documented and stored securely.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- key features section end -->
+
+
+
+    <!-- call to action section start -->
+    <section class="cta-section" style="padding: 6rem 0; background: linear-gradient(135deg, #5EC47E 0%, #4AB96A 100%);">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <h2 class="mb-3 mb-md-4 text-white">Ready to Make Lending Simple?</h2>
+            <p class="mb-4 mb-md-5 text-white opacity-90 mx-auto text-center" style="max-width: 600px;">Remove the awkwardness from lending money to friends and family.<br>Start using Vony today.</p>
+            <div class="cta-buttons">
+              <a href="https://lend-with-vony.com" class="theme-btn theme-btn-white position-relative" target="_blank">
+                Get Started with Vony
+                <span class="d-flex justify-content-center align-items-center position-absolute top-0">
+                  <img src="img/icons/icon-up-right.svg" alt="arrow">
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- call to action section end -->
+
+  </main>
+  <!-- main area end -->
+
+  <!-- back to top button start -->
+  <button class="scroll-to-top position-fixed">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M6 15l6 -6l6 6" /></svg>
+  </button>
+  <!-- back to top button end -->
+
+  <!-- footer section start -->
+  <footer class="footer-section-five position-relative overflow-hidden" style="background-color: #3E3A4E; padding: 4rem 0 2rem;">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <img src="attached_assets/VonyWhiteLogoNoBackground_1755048384947.png" alt="Vony Logo" class="mb-3" style="height: 40px;">
+            <p class="mb-4" style="color: white; font-size: 0.9rem; line-height: 1.6;">Connecting people through trusted peer-to-peer micro-lending. Simple, secure, and transparent.</p>
+            <a href="contact.html" class="btn btn-sm" style="background-color: #5EC47E; color: white; border: none; padding: 0.5rem 1.5rem; border-radius: 25px; font-size: 0.9rem; text-decoration: none;">Contact Us</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h5 class="widget-title mb-3" style="color: #5EC47E; font-size: 1.1rem; font-weight: 600;">Address</h5>
+            <p class="mb-0" style="color: white; font-size: 0.95rem; line-height: 1.6;">
+              San Francisco, CA<br>
+              United States
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h5 class="widget-title mb-3" style="color: #5EC47E; font-size: 1.1rem; font-weight: 600;">Phone</h5>
+            <p class="mb-0" style="color: white; font-size: 0.95rem;">
+              <a href="tel:+1-650-924-7120" style="color: white; text-decoration: none;">+1 (650) 924-7120</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget">
+            <h5 class="widget-title mb-3" style="color: #5EC47E; font-size: 1.1rem; font-weight: 600;">Email</h5>
+            <p class="mb-0" style="color: white; font-size: 0.95rem;">
+              <a href="mailto:hello@vony-lending.com" style="color: white; text-decoration: none;">hello@vony-lending.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333;">
+        <p style="color: #888; text-align: center; margin: 0; font-size: 0.9rem;">© 2025 Vony. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section end -->
+
+  <!-- JS here -->
+  <script src="assets/js/vendor/jquery-3.6.0.min.js?v=20251011"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js?v=20251011"></script>
+  
+  <!-- Immediate loader fallback -->
+  <script>
+    // Hide loader immediately on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      var loader = document.querySelector('.fullpage_loader');
+      if (loader) {
+        loader.style.display = 'none';
+      }
+    });
+    
+    // Backup fallback
+    setTimeout(function() {
+      var loader = document.querySelector('.fullpage_loader');
+      if (loader) {
+        loader.style.display = 'none';
+      }
+    }, 100);
+  </script>
+</body>
+
+</html>
